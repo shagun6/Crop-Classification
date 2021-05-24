@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>About</title>
+    <style>
+        .dash {
+            border: 0 none;
+            border-top: 2px dashed #322f32;
+            background: none;
+            height: 0;
+        }
+
+        .divborder {
+            border: 2px solid #a1a1a1;
+            padding: 10px 40px;
+            background: #dddddd;
+            border-radius: 25px;
+        }
+
+        .accordion-item{
+            padding-top:15px;
+            margin-top:15px;
+        }
+       
+    </style>
+</head>
+
+<body style="background-image:url('static/img/dylan-de-jonge-9SjCXUq_qSE-unsplash.jpg')">
+    <div class="container" style="padding-top:90px">
+        <div class="col-sm-12"></div>
+        <div class="divborder">
+            <h2 style="text-align: center;"><B> About The Project </B></h2>
+            <hr class="dash">
+            <!-- <p class="text-justify"><b style="font-size: 16px;"> We need to Write here </b></p><br> -->
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h1 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h3>Motive of the Project</h3>
+                        </button>
+                    </h1>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong> In today's time, farmers face a hard time in choosing which crops to grow. Our main motive of the project is to use emerging deep learning concepts to help farmers to gain maximum profit and also boost their prouction. Our website just requires a pic of the crop and through one pic farmer will get all the important information of that particular crop.</strong>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h3 class="h3Class">How it is beneficial to farmers?</h3>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>  In today's time, farmers face a hard time in choosing which crops to grow. Our website just requires a pic of the crop and through one pic farmer will get all the important information of that particular crop. Through this, they can just have to upload pic of a crop(no matter even if they don't know which type of crop is that), our website will predict the crop type and also help the farmers to know different factors like temperature, climate, soil suitable for that particular crop, market price of the crop and states in which that crop is mostly grown. This will evetually help them to plan their sowing accordingly.</strong>                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <h3 class="h3Class">Technologies we are using</h3>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>We basically used deep learning concepts to train our model to predict crop type. We have used Python Web framework Flask and integrate deep learning models with it. We used a dataset containig 804 images to train our model and used dataset of 201 images to test the model.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <h3 class="h3Class">Crops we are Predicting</h3>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>We are basically predicting 5 types of crops.
+                            </strong>
+                            <ul>
+                                <li>Jute</li>
+                                <li>Maize</li>
+                                <li>Sugarcane</li>
+                                <li>Rice</li>
+                                <li>Wheat</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <h3 class="h3Class">Future Scope of Project</h3>
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>In future, we can also add the feature in our website that will also tell the geolocation of the image uploaded along with the type of the crop.
+We can take more crops for classification and also we can take larger image dataset which will eventually increase prediction accuracy.</strong>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            <h3 class="h3Class">Mentor of the Project</h3>
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>We would like to express our sincere gratitude and heartfelt thanks to Dr. Nishtha Hooda for
+                                their unflinching support and guidance, valuable suggestions and expert advice. Their words
+                                of wisdom and expertise in subject matter were of immense help throughout the duration of
+                                this project.
+                            </strong>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

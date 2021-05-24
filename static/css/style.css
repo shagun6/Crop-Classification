@@ -1,0 +1,75 @@
+.container{
+    margin-top:15px;
+    }
+.card{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+.intro {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1rem;
+   background: linear-gradient(45deg, #ffcc5c 33%, rgba(0,0,0,0.6) 35%), url(https://images.unsplash.com/photo-1510519138101-570d1dca3d66);
+  background-size: cover; 
+  /* background: repeating-linear-gradient(45deg, #ff6f69 0%, #ff6f69 5%, #ffcc5c 5%, #ffcc5c 10%); */
+  /*background: linear-gradient(45deg, #ffcc5c 20%, #3c3c3c 20% 50%, #ff6f69 50% 80%, #96ceb4 80%);*/
+}
+.intro-body {
+  border: 5px solid #fff;
+  padding: 2rem 3rem;
+  background-color: rgba(0,0,0,0.2);
+}
+.intro h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+.intro p {
+  font-size: 1.75rem;
+}
+
+@media (max-width: 700px) {
+  html { font-size: 12px; }
+  .intro-body { border: 3px solid #fff; padding: 1.5rem 2rem; }
+  .intro h1 { font-size: 2.5rem; }
+  .intro p { font-size: 1.25rem; }
+}
+.header{
+  width: 100%;
+  background-color: rgba(0,0,0,.2);
+}
+.header ul{
+  text-align: right;
+}
+.header ul li{
+  list-style: none;
+  display: inline-block;
+}
+.header ul li a{
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-size: 20px;
+  font-family:'Raleway' ,sans-serif;
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding:25px;
+  transaction: all ease 0.5%;
+}
+.header ul li a:hover{
+  background-color: hsl(91, 43%, 73%);
+}
