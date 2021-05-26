@@ -9,14 +9,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
-
+   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"> -->
+   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous"> -->
+   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <style type="text/css">
         * {
             margin: 0;
         }
 
         body {
-			
+
             background: url("static/img/w2.jpg") no-repeat;
             background-size: cover;
             height: 100vh;
@@ -147,6 +149,15 @@
 
             border-radius: 20px;
         }
+        .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+  
+   color: white;
+   text-align: center;
+}
 
         /*     
     body { -webkit-animation:fadein 0.7s; animation:fadein 0.7s }
@@ -157,101 +168,104 @@
 </head>
 
 <body class="fade-out">
-    <div class="container-fluid">
-        <div class="header">
-            <ul>
+    <nav>
+        <div class="container-fluid">
+            <div class="header">
+                <ul>
 
-                <li><a href="/crop">Crop Classes</a></li>
-                <li><a href="/about">About</a></li>
-            </ul>
-        </div>
-  
-
-    <div class="container-fluid">
-        <div class="row mb-5">
-            <div class="col-lg-12 col-md-12 col-12 column">
-                <h1 style="color:black;font-weight: 900;font-size: 7rem;margin-top:4%;text-align: center">Crop
-                    Classification</h1>
+                    <li><a href="/crop">Crop Classes</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-12 column">
-                <button type="button" class="btn btn-info btn-lg upload-label buttonClass" data-toggle="modal"
-                    data-target="#myModal">Click here to upload Image</button>
-            </div>
-        </div>
-        <div id="myModal" class="modal fade modelClass" role="dialog">
-            <div class="modal-dialog">
 
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
 
-                        <h4 class="modal-title">Upload Crop Image for Classification</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-
-                        <form id="upload-file" method="post" enctype="multipart/form-data">
-                            <label for="imageUpload" class="upload-label" style="color:rgb(246, 246, 246);">
-                                Choose...
-                            </label>
-                            <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
-                        </form>
-                        <div class="image-section" style="display:none;">
-                            <div class="img-preview" style="position:center;">
-                                <div id="imagePreview">
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary btn-lg " id="btn-predict" style="background: rgb(131, 211, 2);border-radius: 25px;font-color:rgb(246, 246, 246);font-size: 1.2em;
-                                font-weight: 600;">Predict!</button>
-                            </div>
-                        </div>
-
-                        <div class="loader" style="display:none;"></div>
-
-                        <h3 id="result" style="margin-left: 400px;">
-                            <span> </span>
-                        </h3>
-
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <div class="container-fluid">
+                <div class="row mb-5">
+                    <div class="col-lg-12 col-md-12 col-12 column">
+                        <h1 style="color:black;font-weight: 900;font-size: 7rem;margin-top:4%;text-align: center">Crop
+                            Classification</h1>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12 column">
+                        <button type="button" class="btn btn-info btn-lg upload-label buttonClass" data-toggle="modal"
+                            data-target="#myModal">Click here to upload Image</button>
+                    </div>
+                </div>
+                <div id="myModal" class="modal fade modelClass" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <h4 class="modal-title">Upload Crop Image for Classification</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+
+                                <form id="upload-file" method="post" enctype="multipart/form-data">
+                                    <h5 class="mb-3">Upload image of the crop you want to predict</h5>
+                                    <label for="imageUpload" class="upload-label" style="color:rgb(246, 246, 246);">
+                                        
+                                        Choose...
+                                    </label>
+                                    <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+                                </form>
+                                <div class="image-section" style="display:none;">
+                                    <div class="img-preview" style="position:center;">
+                                        <div id="imagePreview">
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-primary btn-lg " id="btn-predict" style="background: rgb(131, 211, 2);border-radius: 25px;font-color:rgb(246, 246, 246);font-size: 1.2em;
+                                font-weight: 600;">Predict!</button>
+                                    </div>
+                                </div>
+
+                                <div class="loader" style="display:none;"></div>
+
+                                <h3 id="result" style="margin-left: 400px;">
+                                    <span> </span>
+                                </h3>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-
-        </div>
-    </div>
-    <div class="container-fluid">
-        <footer class="container-fluid bg-dark text-white mt-5" style="border-top: 3px solid #DC3545;">
-            <div class="container">
-                <!-- Start Footer Container -->
-                <div class="row py-3">
-                    <!-- Start Footer Row -->
-                    <div class="col-md-6">
-                        <!-- Start Footer 1st Column -->
-                        <span class="pr-2">Follow Us: </span>
-                        <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-youtube"></i></a>
-                        <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#" target="_blank" class="pr-2 fi-color"><i class="fas fa-rss"></i></a>
-                    </div> <!-- End Footer 1st Column -->
-
-                    <div class="col-md-6 text-right">
-                        <!-- Start Footer 2nd Column -->
-                        <small> Designed by Someone &copy; 2018.
-                        </small>
-                        <small class="ml-2"><a href="Admin/login.php">Admin Login</a></small>
-                    </div> <!-- End Footer 2nd Column -->
-                </div> <!-- End Footer Row -->
-            </div> <!-- End Footer Container -->
-        </footer> <!-- End Footer -->
-
-    </div>
+    </nav>
+    <div class="footer">
+            <footer class="container-fluid bg-dark text-white mt-5" style="border-top: 3px solid green">
+                    <div class="container">
+                        <!-- Start Footer Container -->
+                        <div class="row py-3">
+                            <!-- Start Footer Row -->
+                            <!-- <div class="col-md-6"> -->
+                                <!-- Start Footer 1st Column -->
+                                <!-- <span class="pr-2">Follow Us: </span>
+                                <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-twitter"></i></a>
+                                <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-youtube"></i></a>
+                                <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#" target="_blank" class="pr-2 fi-color"><i class="fas fa-rss"></i></a>
+                            </div>  -->
+        
+                            <div class="col-md-6 text-right">
+                                <!-- Start Footer 2nd Column -->
+                                <small> Designed by Amigos &copy; 2021
+                                </small>
+                                <!-- <small class="ml-2"><a href="Admin/login.php">Admin Login</a></small> -->
+                            </div> <!-- End Footer 2nd Column -->
+                        </div> <!-- End Footer Row -->
+                    </div> <!-- End Footer Container -->
+                </footer> <!-- End Footer -->
+          </div>
 
 
 
